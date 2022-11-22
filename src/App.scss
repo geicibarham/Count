@@ -1,2 +1,9 @@
 @use "./components/landing/landing";
+@use "./components/nav/nav";
+@use "./components/footer/footer";
+@use "./components/firstGame/first";
+
+.comic {
+    font-family: "comic sans ms";
+  }
 

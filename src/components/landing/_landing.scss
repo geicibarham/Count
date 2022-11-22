@@ -1,12 +1,18 @@
 .landing {
-  min-height: 100vh;
+  min-height: 80vh;
   background-color: #ffc7c7;
   background-color: #d95b8b;
-
   display: flex;
   justify-content: center;
   align-items: center;
 
+  .comic {
+    font-family: "comic sans ms";
+  }
+
+  .btnIcon {
+    width: 50px;
+  }
   @mixin generalBtn {
     height: fit-content;
     padding: 20px;
@@ -16,7 +22,9 @@
     color: white;
     cursor: pointer;
     width: fit-content;
-   
+    display: flex;
+    align-items: center;
+    font-weight: bold;
   }
 
   .firstBtn {
@@ -31,11 +39,19 @@
   .secondBtn {
     @include generalBtn;
     background-color: #61d4b3;
+    &:hover {
+      box-shadow: 0 0 10px 10px #b6f9c9;
+      box-shadow: 0 0 10px 10px rgba(105, 255, 180, 0.435);
+    }
   }
 
   .thirdBtn {
     @include generalBtn;
     background-color: #45171d;
+    &:hover {
+      box-shadow: 0 0 10px 10px #b6f9c9;
+      box-shadow: 0 0 10px 10px #45171d99;
+    }
   }
   .btn-container {
     background-image: url("../../assets/images/iStock-1143155811.jpg");
@@ -46,5 +62,11 @@
     display: grid;
     width: 30%;
     justify-items: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .landing {
+    min-height: 85vh;
   }
 }
