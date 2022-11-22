@@ -6,6 +6,9 @@
   justify-content: center;
   align-items: center;
 
+  .linkbtn{
+    text-decoration: none;
+  }
   .comic {
     font-family: "comic sans ms";
   }
@@ -69,4 +72,13 @@
   .landing {
     min-height: 85vh;
   }
+
+ 
+}
+
+@media screen and (min-width: 1200px) {
+  .landing {
+    min-height: 86vh;
+  }
+
 }
