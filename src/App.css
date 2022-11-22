@@ -1,0 +1,67 @@
+.landing {
+  min-height: 100vh;
+  background-color: #ffc7c7;
+  background-color: #d95b8b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.landing .firstBtn {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 20px;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  color: white;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #fd2eb3;
+}
+.landing .firstBtn:hover {
+  box-shadow: 0 0 10px 10px #b6f9c9;
+  box-shadow: 0 0 10px 10px rgba(255, 105, 180, 0.435);
+}
+.landing .secondBtn {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 20px;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  color: white;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #61d4b3;
+}
+.landing .thirdBtn {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 20px;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  color: white;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #45171d;
+}
+.landing .btn-container {
+  background-image: url("../../assets/images/iStock-1143155811.jpg");
+  background-size: cover;
+  padding: 100px;
+  border-radius: 20px;
+  height: 50%;
+  display: grid;
+  width: 30%;
+  justify-items: center;
+}/*# sourceMappingURL=App.css.map */

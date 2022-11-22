@@ -1,0 +1,50 @@
+.landing {
+  min-height: 100vh;
+  background-color: #ffc7c7;
+  background-color: #d95b8b;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @mixin generalBtn {
+    height: fit-content;
+    padding: 20px;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    color: white;
+    cursor: pointer;
+    width: fit-content;
+   
+  }
+
+  .firstBtn {
+    @include generalBtn;
+    background-color: #fd2eb3;
+
+    &:hover {
+      box-shadow: 0 0 10px 10px #b6f9c9;
+      box-shadow: 0 0 10px 10px rgba(255, 105, 180, 0.435);
+    }
+  }
+  .secondBtn {
+    @include generalBtn;
+    background-color: #61d4b3;
+  }
+
+  .thirdBtn {
+    @include generalBtn;
+    background-color: #45171d;
+  }
+  .btn-container {
+    background-image: url("../../assets/images/iStock-1143155811.jpg");
+    background-size: cover;
+    padding: 100px;
+    border-radius: 20px;
+    height: 50%;
+    display: grid;
+    width: 30%;
+    justify-items: center;
+  }
+}
