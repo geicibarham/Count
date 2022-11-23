@@ -1,11 +1,70 @@
+import "./_first.scss";
+import React, { useState } from "react";
+import questions from "../../assets/data/data";
 
-import './_first.scss'
-const Firstgame=()=>{
-    return (
-        <div className="firstgame">
-        <h2>test</h2>
+
+const Firstgame = () => {
+  const [showResults, setShowResults] = useState(false);
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [score, setScore] = useState(0);
+
+  const optionClicked = (isCorrect) => {
+    // Increment the score
+    if (isCorrect) {
+      setScore(score + 1);
+    }
+
+    if (currentQuestion + 1 < questions.length) {
+      setCurrentQuestion(currentQuestion + 1);
+    } else {
+      setShowResults(true);
+    }
+  };
+
+  const restartGame = () => {
+    setScore(0);
+    setCurrentQuestion(0);
+    setShowResults(false);
+  };
+  return (
+    <div className="firstgame">
+    
+      <h3 className='comic'>Score {score}</h3>
+
+      {showResults ? (
+        <div>
+          <h4 className="comic">Final Score is {score}</h4>
+          <button onClick={restartGame}>Restart</button>
         </div>
-    )
-}
+      ) : (
+        <div className="question-card comic">
+          <h2>
+            Question: {currentQuestion + 1} out of {questions.length}
+          </h2>
+
+          <h3 className="question-text">{questions[currentQuestion].text}</h3>
+          
+          <img className="candy-icon"
+          src={questions[currentQuestion].image} alt="donuts" />
+
+          {questions[currentQuestion].options.map((option, index) => {
+            return (
+              <div key={option.id} className="btn-container comic">
+                
+                
+                <button className={"btn"+index + 1 }
+                  key={option.id}
+                  onClick={() => optionClicked(option.isCorrect)}
+                >
+                  {option.text}
+                </button>
+              </div>
+            );
+          })}
+        </div>
+      )}
+    </div>
+  );
+};
 
 export default Firstgame;
