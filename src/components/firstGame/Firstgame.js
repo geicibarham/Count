@@ -26,24 +26,26 @@ const Firstgame = () => {
     setCurrentQuestion(0);
     setShowResults(false);
   };
+
   return (
     <div className="firstgame">
     
-      <h3 className='comic'>Score {score}</h3>
+      <h2 className='comic'>Score {score}</h2>
 
       {showResults ? (
-        <div>
-          <h4 className="comic">Final Score is {score}</h4>
+        <div className="final-result">
+          <h3 className="comic">Final Score is {score}</h3>
           <button onClick={restartGame}>Restart</button>
         </div>
       ) : (
         <div className="question-card comic">
-          <h2>
+          <h4>
             Question: {currentQuestion + 1} out of {questions.length}
-          </h2>
+          </h4>
 
-          <h3 className="question-text">{questions[currentQuestion].text}</h3>
+          <p className="question-text">{questions[currentQuestion].text}</p>
           
+
           <img className="candy-icon"
           src={questions[currentQuestion].image} alt="donuts" />
 

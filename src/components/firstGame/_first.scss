@@ -1,86 +1,124 @@
 @mixin roundedBorder {
-    border-radius: 20px;
+  border-radius: 20px;
 }
 .firstgame {
- 
+  display: flex;
+  flex-direction: column;
+  background-color: #5cd8d2;
+  align-items: center;
+min-height: 85vh;
+  .candy-icon {
+    width: 600px;
+    margin: auto;
+    margin-bottom: 15px;
+    justify-content: start;
+    @include roundedBorder;
+
+   
+  }
+
+  h2,
+  h3 {
+    text-align: center;
+    color: white;
+  }
+  .question-card {
     display: flex;
     flex-direction: column;
-    background-color: #5cd8d2;
+    background-color: pink;
+    padding: 15px;
+    width: 70%;
+    margin: auto;
+    height: fit-content;
+    @include roundedBorder;
+    color: white;
+    margin-bottom: 17px;
 
-    .candy-icon {
-        width: 600px;
-        margin: auto;
-        margin-bottom: 15px;
-        @include roundedBorder;
-    }
-
-    h2,
-    h3 {
+    p {
+        font-size: 25px;
         text-align: center;
-        color: white;
+      }
+
+      h4{
+        text-align: center;
+      }
+  }
+
+  .btn-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .btn01 {
+    background-color: #f49cbb;
+    &:hover {
+      background-color: #cc99cc;
     }
+  }
+  .btn11 {
+    background-color: #a9def9;
+    &:hover {
+      background-color: #ede7b1;
+    }
+  }
+  .btn21 {
+    background-color: #d3f8e2;
+    &:hover {
+      background-color: lightcoral;
+    }
+  }
+  .btn31 {
+    background-color: #e4c1f9;
+    &:hover {
+      background-color: #f49cbb;
+    }
+  }
+
+  button {
+    margin-top: 8px;
+    color: purple;
+    font-weight: bold;
+    border: none;
+    display: block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .final-result{
+    background: rgb(170,236,218);
+background: linear-gradient(90deg, rgba(170,236,218,1) 0%, rgba(213,196,244,1) 46%, rgba(245,104,189,1) 100%);
+   @include roundedBorder;
+   padding:20px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+ align-items: center;
+   
+
+ h3{
+    color:purple;
+ }
+
+ button{
+    width: 20%;
+    border-radius: 8px;
+    background-color: #f568bd;
+    color:white;
+    &:hover{
+        background-color:  #f568bd80;
+    }
+ }
+  }
+
+  @media screen and (max-width: 768px) {
+    .candy-icon {
+      width: 300px;
+    }
+
     .question-card {
-        display: flex;
-        flex-direction: column;
-        background-color: pink;
-        padding: 15px;
-        width: 70%;
-        margin: auto;
-        height: fit-content;
-        @include roundedBorder;
-        color: white;
-        margin-bottom: 17px;
+      margin-bottom: 130px;
     }
-
-    .btn-container {
-        display: flex;
-        justify-content: center;
-    }
-
-    .btn01 {
-        background-color: #f49cbb;
-        &:hover {
-            background-color: #cc99cc;
-        }
-    }
-    .btn11 {
-        background-color: #a9def9;
-        &:hover {
-            background-color: #ede7b1;
-        }
-    }
-    .btn21 {
-        background-color: #d3f8e2;
-        &:hover {
-            background-color: lightcoral;
-        }
-    }
-    .btn31 {
-        background-color: #e4c1f9;
-        &:hover {
-            background-color: #f49cbb;
-        }
-    }
-
-    button {
-        margin-top: 8px;
-        color: purple;
-        font-weight: bold;
-        border: none;
-        display: block;
-        height: 50px;
-        width: 50px;
-        border-radius: 50%;
-        cursor: pointer;
-    }
-
-    @media screen and (max-width:768px) {
-        .candy-icon{
-            width:300px;
-        }
-
-        .question-card {
-            margin-bottom: 130px;
-        }
-    }
+  }
 }
