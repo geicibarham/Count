@@ -6,15 +6,13 @@
   flex-direction: column;
   background-color: #5cd8d2;
   align-items: center;
-min-height: 85vh;
+  min-height: 85vh;
   .candy-icon {
     width: 600px;
     margin: auto;
     margin-bottom: 15px;
     justify-content: start;
     @include roundedBorder;
-
-   
   }
 
   h2,
@@ -35,13 +33,13 @@ min-height: 85vh;
     margin-bottom: 17px;
 
     p {
-        font-size: 25px;
-        text-align: center;
-      }
+      font-size: 25px;
+      text-align: center;
+    }
 
-      h4{
-        text-align: center;
-      }
+    h4 {
+      text-align: center;
+    }
   }
 
   .btn-container {
@@ -86,30 +84,34 @@ min-height: 85vh;
     cursor: pointer;
   }
 
-  .final-result{
-    background: rgb(170,236,218);
-background: linear-gradient(90deg, rgba(170,236,218,1) 0%, rgba(213,196,244,1) 46%, rgba(245,104,189,1) 100%);
-   @include roundedBorder;
-   padding:20px;
+  .final-result {
+    background: rgb(170, 236, 218);
+    background: linear-gradient(
+      90deg,
+      rgba(170, 236, 218, 1) 0%,
+      rgba(213, 196, 244, 1) 46%,
+      rgba(245, 104, 189, 1) 100%
+    );
+    @include roundedBorder;
+    padding: 20px;
     width: 50%;
     display: flex;
     flex-direction: column;
- align-items: center;
-   
+    align-items: center;
 
- h3{
-    color:purple;
- }
-
- button{
-    width: 20%;
-    border-radius: 8px;
-    background-color: #f568bd;
-    color:white;
-    &:hover{
-        background-color:  #f568bd80;
+    h3 {
+      color: purple;
     }
- }
+
+    button {
+      width: 20%;
+      border-radius: 8px;
+      background-color: #f568bd;
+      color: white;
+      &:hover {
+        background-color: #f568bd80;
+      }
+    }
   }
 
   @media screen and (max-width: 768px) {

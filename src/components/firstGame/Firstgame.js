@@ -35,7 +35,7 @@ const Firstgame = () => {
       {showResults ? (
         <div className="final-result">
           <h3 className="comic">Final Score is {score}</h3>
-          <button onClick={restartGame}>Restart</button>
+          <button className="comic" onClick={restartGame}>RESTART</button>
         </div>
       ) : (
         <div className="question-card comic">
