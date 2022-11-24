@@ -6,7 +6,7 @@
   flex-direction: column;
   background-color: #5cd8d2;
   align-items: center;
-  min-height: 85vh;
+  min-height: 80vh;
   .candy-icon {
     width: 600px;
     margin: auto;
@@ -23,11 +23,12 @@
   .question-card {
     display: flex;
     flex-direction: column;
+    gap: 0px;
     background-color: pink;
     padding: 15px;
     width: 70%;
     margin: auto;
-    height: fit-content;
+    height: 80%;
     @include roundedBorder;
     color: white;
     margin-bottom: 17px;
