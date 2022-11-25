@@ -1,3 +1,5 @@
+$textColor:purple;
+
 @mixin roundedBorder {
   border-radius: 20px;
 }
@@ -6,7 +8,7 @@
   flex-direction: column;
   background-color: #5cd8d2;
   align-items: center;
-  min-height: 80vh;
+  min-height: 85vh;
   .candy-icon {
     width: 600px;
     margin: auto;
@@ -18,34 +20,32 @@
   h2,
   h3 {
     text-align: center;
-    color: white;
+    color: $textColor;
   }
   .question-card {
     display: flex;
     flex-direction: column;
-    gap: 0px;
     background-color: pink;
     padding: 15px;
     width: 70%;
     margin: auto;
     height: 80%;
     @include roundedBorder;
-    color: white;
+    color:$textColor;
     margin-bottom: 17px;
 
-    p {
-      font-size: 25px;
+    span {
+      font-size: 20px;
       text-align: center;
+      margin-bottom: 10px;
     }
 
-    h4 {
-      text-align: center;
-    }
   }
 
   .btn-container {
     display: flex;
-    justify-content: center;
+    justify-content:center ;
+    flex-wrap: nowrap;
   }
 
   .btn01 {
@@ -78,7 +78,6 @@
     color: purple;
     font-weight: bold;
     border: none;
-    display: block;
     height: 50px;
     width: 50px;
     border-radius: 50%;
@@ -104,11 +103,11 @@
       color: purple;
     }
 
-    button {
+    .restartBtn {
       width: 20%;
       border-radius: 8px;
       background-color: #f568bd;
-      color: white;
+      color:$textColor;
       &:hover {
         background-color: #f568bd80;
       }
@@ -123,5 +122,17 @@
     .question-card {
       margin-bottom: 130px;
     }
+
+    .restartBtn{
+        width: 40% !important;
+    }
+ 
   }
+}
+
+
+@media screen and (min-width: 1200px) {
+    .firstgame{
+        min-height: 85vh;
+    }
 }

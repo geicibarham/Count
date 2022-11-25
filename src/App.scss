@@ -2,7 +2,8 @@
 @use "./components/nav/nav";
 @use "./components/footer/footer";
 @use "./components/firstGame/first";
-
+@use "./components/score/score";
+$whitetext:white;
 .comic {
     font-family: "comic sans ms";
   }
