@@ -1,8 +1,13 @@
-
+@use '../../utilities';
 
 footer {
     display: flex;
     justify-content: center;
-    background-color: #5f4444;
-    color:white;
+    background-color: utilities.$brown-chocolate;
+    color:utilities.$white;
+    padding:8px;
+
+    p{
+        font-size: smaller;
+    }
 }

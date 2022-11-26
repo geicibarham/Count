@@ -1,24 +1,21 @@
+@use "../../utilities";
 header {
-    display: flex;
-    color: white;
-    background-color: #5f4444;
-    justify-content: center;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  background-color: utilities.$brown-chocolate;
+  justify-content: center;
+  justify-content: center;
+  align-items: center;
 
-.nav-link{
+  .nav-link {
     font-size: 15px;
-        margin: auto;
-        text-decoration: none;
-        color:white;
-}
-    .comic {
-        font-family: "comic sans ms";
-      }
-
-      .rewards-icon{
-        width: 60px;
-        align-self: baseline;
-        padding:8px;
-      }
+    margin: auto;
+    text-decoration: none;
+    color: utilities.$white;
+  }
+ 
+  .rewards-icon {
+    width: 60px;
+    align-self: baseline;
+    padding: 8px;
+  }
 }

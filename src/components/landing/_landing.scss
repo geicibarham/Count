@@ -1,3 +1,5 @@
+@use "../../utilities";
+
 .landing {
   min-height: 80vh;
   background-color: #ffc7c7;
@@ -5,15 +7,13 @@
   justify-content: center;
   align-items: center;
 
-  .linkbtn{
+  .linkbtn {
     text-decoration: none;
-  }
-  .comic {
-    font-family: "comic sans ms";
   }
 
   .btnIcon {
     width: 50px;
+    margin-left: 5px;
   }
   @mixin generalBtn {
     height: fit-content;
@@ -21,7 +21,7 @@
     border: none;
     border-radius: 8px;
     margin-bottom: 20px;
-    color: white;
+    color: utilities.$white;
     cursor: pointer;
     width: fit-content;
     display: flex;
@@ -58,7 +58,7 @@
   .btn-container {
     background-image: url("../../assets/images/iStock-1143155811.jpg");
     background-size: cover;
-    padding: 100px;
+    padding: 80px;
     border-radius: 20px;
     height: 50%;
     display: grid;
@@ -71,13 +71,10 @@
   .landing {
     min-height: 85vh;
   }
-
- 
 }
 
 @media screen and (min-width: 1200px) {
   .landing {
     min-height: 86vh;
   }
-
 }

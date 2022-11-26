@@ -1,0 +1,19 @@
+// colors
+$white:#ffff;
+$pinkBubblegum:#ff63b5;
+$salmonColor:#f58080;
+$brown-chocolate: #5f4444;
+.comic {
+    font-family: "comic sans ms";
+  }
+
+  .roundedCorner {
+    border-radius: 20px;
+  }
+
+  .btn-general {
+    padding:8px;
+    border:none;
+    border-radius: 8px;
+    cursor: pointer;
+  }

@@ -1,10 +1,31 @@
+.comic {
+  font-family: "comic sans ms";
+}
+
+.roundedCorner {
+  border-radius: 20px;
+}
+
+.btn-general {
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
 .landing {
-  min-height: 100vh;
+  min-height: 80vh;
   background-color: #ffc7c7;
-  background-color: #d95b8b;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.landing .linkbtn {
+  text-decoration: none;
+}
+.landing .btnIcon {
+  width: 50px;
+  margin-left: 5px;
 }
 .landing .firstBtn {
   height: -webkit-fit-content;
@@ -19,6 +40,9 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
   background-color: #fd2eb3;
 }
 .landing .firstBtn:hover {
@@ -38,7 +62,14 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
   background-color: #61d4b3;
+}
+.landing .secondBtn:hover {
+  box-shadow: 0 0 10px 10px #b6f9c9;
+  box-shadow: 0 0 10px 10px rgba(105, 255, 180, 0.435);
 }
 .landing .thirdBtn {
   height: -webkit-fit-content;
@@ -53,15 +84,341 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
   background-color: #45171d;
+}
+.landing .thirdBtn:hover {
+  box-shadow: 0 0 10px 10px #b6f9c9;
+  box-shadow: 0 0 10px 10px rgba(69, 23, 29, 0.6);
 }
 .landing .btn-container {
   background-image: url("../../assets/images/iStock-1143155811.jpg");
   background-size: cover;
-  padding: 100px;
+  padding: 80px;
   border-radius: 20px;
   height: 50%;
   display: grid;
   width: 30%;
   justify-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .landing {
+    min-height: 85vh;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .landing {
+    min-height: 86vh;
+  }
+}
+header {
+  display: flex;
+  background-color: #5f4444;
+  justify-content: center;
+  justify-content: center;
+  align-items: center;
+}
+header .nav-link {
+  font-size: 15px;
+  margin: auto;
+  text-decoration: none;
+  color: white;
+}
+header .rewards-icon {
+  width: 60px;
+  align-self: baseline;
+  padding: 8px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: #5f4444;
+  color: white;
+  padding: 8px;
+}
+footer p {
+  font-size: smaller;
+}
+
+.firstgame {
+  display: flex;
+  flex-direction: column;
+  background-color: #5cd8d2;
+  align-items: center;
+  min-height: 85vh;
+}
+.firstgame .candy-icon {
+  width: 600px;
+  margin: auto;
+  margin-bottom: 15px;
+  justify-content: start;
+  border-radius: 20px;
+}
+.firstgame h2,
+.firstgame h3 {
+  text-align: center;
+  color: purple;
+}
+.firstgame .question-card {
+  display: flex;
+  flex-direction: column;
+  background-color: pink;
+  padding: 15px;
+  width: 70%;
+  margin: auto;
+  height: 80%;
+  border-radius: 20px;
+  color: purple;
+  margin-bottom: 17px;
+}
+.firstgame .question-card span {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.firstgame .btn-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+.firstgame .btn01 {
+  background-color: #f49cbb;
+}
+.firstgame .btn01:hover {
+  background-color: #cc99cc;
+}
+.firstgame .btn11 {
+  background-color: #a9def9;
+}
+.firstgame .btn11:hover {
+  background-color: #ede7b1;
+}
+.firstgame .btn21 {
+  background-color: #d3f8e2;
+}
+.firstgame .btn21:hover {
+  background-color: lightcoral;
+}
+.firstgame .btn31 {
+  background-color: #e4c1f9;
+}
+.firstgame .btn31:hover {
+  background-color: #f49cbb;
+}
+.firstgame button {
+  margin-top: 8px;
+  color: purple;
+  font-weight: bold;
+  border: none;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.firstgame .final-result {
+  background: rgb(170, 236, 218);
+  background: linear-gradient(90deg, rgb(170, 236, 218) 0%, rgb(213, 196, 244) 46%, rgb(245, 104, 189) 100%);
+  border-radius: 20px;
+  padding: 20px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.firstgame .final-result h3 {
+  color: purple;
+}
+.firstgame .final-result .restartBtn {
+  width: 20%;
+  border-radius: 8px;
+  background-color: #f568bd;
+  color: purple;
+}
+.firstgame .final-result .restartBtn:hover {
+  background-color: rgba(245, 104, 189, 0.5019607843);
+}
+@media screen and (max-width: 768px) {
+  .firstgame .candy-icon {
+    width: 300px;
+  }
+  .firstgame .question-card {
+    margin-bottom: 130px;
+  }
+  .firstgame .restartBtn {
+    width: 40% !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .firstgame {
+    min-height: 85vh;
+  }
+}
+.outer-container-score {
+  display: flex;
+  flex-direction: column;
+  min-height: 85vh;
+  align-items: center;
+  background-color: #f694c1;
+}
+.outer-container-score h1,
+.outer-container-score h2 {
+  color: white;
+}
+
+.score-card {
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(95, 68, 68);
+  background: linear-gradient(90deg, rgb(95, 68, 68) 1%, rgba(232, 88, 154, 0.942919482) 46%, rgb(244, 188, 253) 100%);
+  padding: 15px;
+  width: 30%;
+  margin-top: 10px;
+  text-align: center;
+  color: white;
+  margin-bottom: 10px;
+}
+.score-card p {
+  font-size: 20px;
+}
+
+.play-btn {
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  background: rgb(95, 68, 68);
+  cursor: pointer;
+}
+
+.icon {
+  width: 50px;
+  align-self: center;
+}
+
+@media screen and (max-width: 768px) {
+  .score-card {
+    width: 60%;
+  }
+}
+.result-container {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  background-image: url("../../assets/images/test.jpg");
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
+  background-position: 5% 82%;
+}
+@media (min-width: 1200px) {
+  .result-container {
+    min-height: 85vh;
+  }
+}
+.result-container button {
+  background: linear-gradient(90deg, rgb(95, 68, 68) 1%, rgba(232, 88, 154, 0.942919482) 46%, rgba(232, 88, 154, 0.942919482) 46%);
+  color: white;
+}
+.result-container .btn-container {
+  display: flex;
+  justify-content: space-around;
+}
+.result-container .result-card {
+  margin-top: 50px;
+  background-color: #f58080;
+  padding: 40px;
+}
+
+.outer-container {
+  background-color: #f6adc7;
+  justify-content: flex-start;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+@media (min-width: 1200px) {
+  .outer-container {
+    min-height: 85vh;
+  }
+}
+.outer-container .btn-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: green;
+}
+.outer-container .feedback {
+  font-size: 20px;
+}
+.outer-container .second-game-form {
+  padding: 60px;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #69e9f5;
+}
+.outer-container .second-game-form button {
+  padding: 12px;
+  background-color: #ff63b5;
+  color: white;
+}
+.outer-container .second-game-form button:hover {
+  background-color: rgba(255, 99, 182, 0.4);
+}
+.outer-container .correct {
+  padding: 60px;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #27bf03;
+}
+.outer-container .incorrect {
+  padding: 60px;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #f58080;
+}
+.outer-container input {
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 8px 8px;
+}
+.outer-container .firstNumber {
+  background-color: #ff63b5;
+}
+.outer-container .secondNumber {
+  background-color: #645fce;
+}
+.outer-container .number {
+  height: 25px;
+  width: 25px;
+  padding: 20px;
+  border-radius: 50px;
+  font-weight: bold;
+  display: inline-block;
+  color: white;
+  font-size: larger;
+}
+.outer-container .operator {
+  color: orange !important;
+  font-size: 60px;
+  padding: 10px;
+}
+
+@media screen and (min-width: 1200px) {
+  .outer-container {
+    min-height: 87vh;
+  }
 }/*# sourceMappingURL=App.css.map */
