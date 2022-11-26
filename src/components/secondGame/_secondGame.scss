@@ -9,53 +9,114 @@
   font-size: larger;
 }
 
-.outer-container {
-min-height: 85vh;
-display: flex;
-align-items: center;
-justify-content: center;
-background-color: #f6adc7;
-
-
-
-input {
-    border: none;
-    padding:15px;
-    border-radius: 8px;
-    margin:8px 8px;
-}
-// #27bf03
-.firstNumber{
-background-color:purple
-}
-
-.secondNumber {
-background-color:purple;
-}
-.second-game-form {
-  display: flex;
-  background-color: #E4C1F9;
-  padding:50px;
+@mixin formContainer {
+  padding: 60px;
   align-items: center;
-
-  button{
-padding: 12px;
-background-color: #ff63b5;
-color:white;
-&:hover{
-    background-color: #ff63b666;
+  display: flex;
+  flex-wrap: wrap;
+ 
 }
+@mixin outer {
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.result-container{
+@include outer;
+background-image: url('../../assets/images/test.jpg');
+
+
+
+justify-content: center;
+background-position: center;
+background-size: cover;
+background-position: 5% 82%;
+
+.result-card {
+margin-top: 50px;
+background-color: #f58080;
+padding:40px;
+}
+}
+.outer-container {
+
+  background-color: #f6adc7;
+  justify-content: flex-start;
+  @include outer;
+
+  .btn-container{
+    display: grid;
+  grid-template-columns: 1fr;
+  background-color: green;
+    
+  }
+
+  .feedback{
+    font-size: 20px;
+  }
+  .second-game-form {
+    @include formContainer;
+    background-color: #69e9f5;
+
+
+    button {
+      padding: 12px;
+      background-color: #ff63b5;
+      color: white;
+      &:hover {
+        background-color: #ff63b666;
+      }
+    }
+  }
+
+  .correct {
+    @include formContainer;
+    background-color: #27bf03;
+  }
+
+  .incorrect {
+    @include formContainer;
+    background-color:#f58080;
+  }
+
+  input {
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 8px 8px;
+  }
+  // #27bf03
+  .firstNumber {
+    background-color: #ff63b5;
+  }
+
+  .secondNumber {
+    background-color: #645fce;
+  }
+
+  .number {
+    @include roundedbtn;
+  }
+  .operator {
+    color: orange !important;
+    font-size: 60px;
+    padding: 10px;
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .outer-container {
+    min-height: 87vh;
+  }
 
-.number {
-  @include roundedbtn;
-}
-.operator{
-    color:orange !important;
-    font-size: 60px;
-    padding:10px;
+  
 }
 
+@media screen and (max-width:1200px) {
+  .outer {
+    display: none;
+  }
 }
