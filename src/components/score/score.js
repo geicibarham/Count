@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./_score.scss";
+import rewards from '../../assets/images/rewards.png'
 const Score = () => {
     const [scoreArr, setScorearr] = useState([]);
 
@@ -14,8 +15,8 @@ const Score = () => {
         return (
             <div className="outer-container-score">
                 <h2 className="comic">No Scores at this time!</h2>
-                <Link to="/landing">
-                <button className="comic">START PLAYING</button>
+                <Link to="/">
+                <button className="play-btn comic">START PLAYING</button>
                 </Link>
             </div>
         )
@@ -30,6 +31,7 @@ const Score = () => {
                 <div className="score-card">
                     <p className="comic" key={index.toString()}>
                         {score}
+                        <img className="icon" src={rewards} alt="rewards icon" />
                     </p>
                 </div>
             ))}

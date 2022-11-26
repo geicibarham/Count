@@ -1,28 +1,56 @@
-.outer-container-score{
-    display: flex;
-    flex-direction: column;
-    min-height: 85vh;
-    align-items: center;
-    background-color:#F694C1;
-    h1, h2{
-        color:white;
-    }
+$whitetext:white;
+
+.outer-container-score {
+  display: flex;
+  flex-direction: column;
+  min-height: 85vh;
+  align-items: center;
+  background-color: #f694c1;
+  h1,
+  h2 {
+    color: $whitetext;
+  }
 }
 
-.score-card{
-    border-radius: 20px;
-    background: rgb(95,68,68);
-    background: linear-gradient(90deg, rgba(95,68,68,1) 1%, rgba(232,88,154,0.9429194819819819) 46%, rgba(244,188,253,1) 100%);
-    padding:15px;
-    width: 30%;
-    margin-top: 10px;
-    text-align: center;
-    color:white;
-    margin-bottom: 10px;
+.score-card {
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(95, 68, 68);
+  background: linear-gradient(
+    90deg,
+    rgba(95, 68, 68, 1) 1%,
+    rgba(232, 88, 154, 0.9429194819819819) 46%,
+    rgba(244, 188, 253, 1) 100%
+  );
+  padding: 15px;
+  width: 30%;
+  margin-top: 10px;
+  text-align: center;
+  color: $whitetext;
+  margin-bottom: 10px;
 
-    p{
-        font-size: 20px;
+  p {
+    font-size: 20px;
+  }
+}
+
+.play-btn {
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  color: $whitetext;
+ background: rgb(95, 68, 68);
+ cursor: pointer;
+}
+.icon{
+    width: 50px;
+    align-self: center;
+}
+
+@media screen and (max-width:768px) {
+    .score-card {
+        width: 60%;
     }
-
-    
 }
