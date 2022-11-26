@@ -11,7 +11,10 @@ const Landing = () => {
             <img className="btnIcon" src={cupcake} alt="cupcake icon" />
           </button>
         </Link>
+        <Link to="/second">
         <button className="secondBtn comic">Level 2</button>
+        </Link>
+    
         <button className="thirdBtn comic"> Level 3</button>
       </div>
     </section>

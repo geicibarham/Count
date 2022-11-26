@@ -1,0 +1,61 @@
+@mixin roundedbtn {
+  height: 25px;
+  width: 25px;
+  padding: 20px;
+  border-radius: 50px;
+  font-weight: bold;
+  display: inline-block;
+  color: white;
+  font-size: larger;
+}
+
+.outer-container {
+min-height: 85vh;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: #f6adc7;
+
+
+
+input {
+    border: none;
+    padding:15px;
+    border-radius: 8px;
+    margin:8px 8px;
+}
+// #27bf03
+.firstNumber{
+background-color:purple
+}
+
+.secondNumber {
+background-color:purple;
+}
+.second-game-form {
+  display: flex;
+  background-color: #E4C1F9;
+  padding:50px;
+  align-items: center;
+
+  button{
+padding: 12px;
+background-color: #ff63b5;
+color:white;
+&:hover{
+    background-color: #ff63b666;
+}
+  }
+}
+
+
+.number {
+  @include roundedbtn;
+}
+.operator{
+    color:orange !important;
+    font-size: 60px;
+    padding:10px;
+}
+
+}

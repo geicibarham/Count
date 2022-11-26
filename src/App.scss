@@ -3,8 +3,18 @@
 @use "./components/footer/footer";
 @use "./components/firstGame/first";
 @use "./components/score/score";
-$whitetext:white;
+@use "./components/secondGame/secondGame";
 .comic {
     font-family: "comic sans ms";
+  }
+
+  .roundedCorner {
+    border-radius: 20px;
+  }
+
+  .btn-general {
+    padding:8px;
+    border:none;
+    border-radius: 8px;
   }
 
