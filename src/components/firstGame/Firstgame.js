@@ -51,7 +51,7 @@ const Firstgame = () => {
             RESTART
           </button>
 
-          <Link to="/scores">  <button className="comic">
+          <Link to="/scores">  <button className="scores-btn comic">
             SEE SCORES
           </button></Link>
 

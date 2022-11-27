@@ -1,4 +1,5 @@
-$textColor:purple;
+
+@use '../../utilities';
 
 @mixin roundedBorder {
   border-radius: 20px;
@@ -20,7 +21,7 @@ $textColor:purple;
   h2,
   h3 {
     text-align: center;
-    color: $textColor;
+ color: utilities.$Dark-purple;
   }
   .question-card {
     display: flex;
@@ -31,7 +32,7 @@ $textColor:purple;
     margin: auto;
     height: 80%;
     @include roundedBorder;
-    color:$textColor;
+    color:utilities.$Dark-purple;
     margin-bottom: 17px;
 
     span {
@@ -75,7 +76,7 @@ $textColor:purple;
 
   button {
     margin-top: 8px;
-    color: purple;
+    color: utilities.$Dark-purple;
     font-weight: bold;
     border: none;
     height: 50px;
@@ -100,17 +101,25 @@ $textColor:purple;
     align-items: center;
 
     h3 {
-      color: purple;
+     color: utilities.$Dark-purple;
     }
 
     .restartBtn {
       width: 20%;
       border-radius: 8px;
       background-color: #f568bd;
-      color:$textColor;
+      color:utilities.$Dark-purple;
       &:hover {
         background-color: #f568bd80;
       }
+    
+    }
+    .scores-btn {
+     width: fit-content;
+     border-radius: 8px;
+     &:hover{
+      background-color: utilities.$pinkBubblegum;
+     }
     }
   }
 

@@ -241,6 +241,15 @@ footer p {
 .firstgame .final-result .restartBtn:hover {
   background-color: rgba(245, 104, 189, 0.5019607843);
 }
+.firstgame .final-result .scores-btn {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 8px;
+}
+.firstgame .final-result .scores-btn:hover {
+  background-color: #ff63b5;
+}
 @media screen and (max-width: 768px) {
   .firstgame .candy-icon {
     width: 300px;
