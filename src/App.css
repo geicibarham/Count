@@ -430,4 +430,89 @@ footer p {
   .outer-container {
     min-height: 87vh;
   }
+}
+.outer_container {
+  min-height: 83vh;
+  background-color: #c9a15a;
+  display: flex;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  color: #5f4444;
+}
+.outer_container img {
+  width: 300px;
+  height: 300px;
+}
+.outer_container .score {
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  padding: 25px;
+  width: 50%;
+  background-color: #f7ce76;
+  border-radius: 10px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
+  place-self: center;
+  color: #5f4444;
+}
+.form h2 {
+  font-size: 35px;
+  padding: 14px;
+}
+.form input {
+  height: 50px !important;
+  border: none;
+  margin: 10px;
+  color: #5f4444;
+  font-weight: bold;
+  font-size: 20px;
+  box-sizing: border-box;
+  transition: 0.1s;
+  outline: none;
+  border-radius: 8px;
+}
+.form input:focus {
+  border: solid 2px #5f4444;
+}
+.form button {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: #5f4444;
+  color: white;
+  padding: 13px;
+}
+
+.correct {
+  background-color: #27bf03;
+}
+
+.incorrect {
+  background-color: rgba(207, 79, 79, 0.586);
+}
+
+@media screen and (max-width: 768px) {
+  .outer_container {
+    display: grid;
+    min-height: 85vh;
+  }
+  .outer_container img {
+    width: 250px;
+    height: 250px;
+  }
+  .outer_container .form {
+    display: flex;
+    flex-direction: column;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
 }/*# sourceMappingURL=App.css.map */

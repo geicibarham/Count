@@ -1,22 +1,22 @@
 // colors
-$white:#ffff;
-$pinkBubblegum:#ff63b5;
-$salmonColor:#f58080;
+$white: #ffff;
+$pinkBubblegum: #ff63b5;
+$salmonColor: #f58080;
 $brown-chocolate: #5f4444;
-$Dark-purple:purple;
+$Dark-purple: purple;
+$green-correct: #27bf03;
+$incorrect: rgba(207, 79, 79, 0.586);
 .comic {
-    font-family: "comic sans ms";
-  }
+  font-family: "comic sans ms";
+}
 
-  .roundedCorner {
-    border-radius: 20px;
-  }
+.roundedCorner {
+  border-radius: 20px;
+}
 
-  .btn-general {
-    padding:8px;
-    border:none;
-    border-radius: 8px;
-    cursor: pointer;
-  }
-
-  
+.btn-general {
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}

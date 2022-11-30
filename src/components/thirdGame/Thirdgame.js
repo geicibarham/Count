@@ -5,8 +5,10 @@ const numbers = [9, 16, 25, 81, 49, 36, 64, 100];
 const randomNumber = numbers[Math.floor(Math.random() * numbers.length)];
 const Third = () => {
   const [data, setData] = useState(0);
-  const answer = useRef();
   const [score, setScore] = useState(0);
+  const [iscorrect,setIscorrect] = useState(false)
+  const answer = useRef();
+  
 
   useEffect(() => {
     axios
@@ -30,7 +32,7 @@ const Third = () => {
   console.log(typeof data);
   return (
     <section className="outer_container">
-      <p>{score}</p>
+      <h2 className="comic score">Score:{score}</h2>
       <form className="form">
         <h2>√{randomNumber}</h2>
         <input ref={answer} type="number" />

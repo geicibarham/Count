@@ -7,10 +7,14 @@
   justify-content: center;
   display: grid;
   grid-template-columns: 1fr;
-
+  color:utilities.$brown-chocolate;
   img {
     width: 300px;
     height: 300px;
+  }
+
+  .score{
+    text-align: center;
   }
 }
 
@@ -25,7 +29,7 @@
   align-items: center;
   justify-content: center;
   place-self: center;
-  color:#5f4444;
+  color:utilities.$brown-chocolate;
 
   h2 {
     font-size: 35px;
@@ -36,7 +40,7 @@
     height: 50px !important;
     border: none;
     margin: 10px;
-    color: hotpink;
+    color:utilities.$brown-chocolate;
     font-weight: bold;
     font-size: 20px;
     box-sizing: border-box;
@@ -55,4 +59,32 @@
     color:utilities.$white;
     padding:13px;
   }
+}
+
+.correct{
+background-color: utilities.$green-correct;
+}
+
+.incorrect {
+    background-color: utilities.$incorrect;
+}
+
+@media screen and (max-width:768px) {
+
+    .outer_container{
+display: grid;
+min-height: 85vh;
+
+img{
+    width: 250px;
+    height:250px;
+}
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width:fit-content;
+}
+    }
 }
