@@ -1,0 +1,33 @@
+.outer_container{
+min-height: 83vh;
+background-color: rgb(63, 141, 165);
+display: flex;
+justify-content: center;
+grid-template-columns: 1fr;
+
+}
+
+.form{
+    display: flex;
+    padding:35px;
+    width: 50%;
+    background-color: pink;
+    border-radius: 10px;
+    height: fit-content;
+    margin-top: 30px;
+    align-items: center;
+
+    h2{
+       
+        font-size: 35px;
+        padding:14px;
+    }
+
+    input{
+        height: fit-content;
+        border: none;
+    }
+    button{
+        height:fit-content
+    }
+}
