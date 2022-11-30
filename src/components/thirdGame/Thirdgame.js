@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
+import ginger from '../../assets/images/gingerbread-man.png'
 const numbers = [9, 16, 25, 81, 49, 36, 64, 100];
 const randomNumber = numbers[Math.floor(Math.random() * numbers.length)];
 const Third = () => {
@@ -29,7 +30,7 @@ const Third = () => {
   console.log(typeof data);
   return (
     <section className="outer_container">
-        <p>{score}</p>
+      <p>{score}</p>
       <form className="form">
         <h2>√{randomNumber}</h2>
         <input ref={answer} type="number" />
@@ -37,6 +38,8 @@ const Third = () => {
           SEND
         </button>
       </form>
+
+      <img src={ginger} alt="gingerbread icon" />
     </section>
   );
 };
