@@ -7,6 +7,7 @@ const Third = () => {
   const [data, setData] = useState(0);
   const [score, setScore] = useState(0);
   const [iscorrect,setIscorrect] = useState(false)
+  const [feedback,setFeedback] = useState("")
   const answer = useRef();
   
 
@@ -22,23 +23,37 @@ const Third = () => {
     e.preventDefault();
     const enteredAnswer = answer.current?.value;
     if (data === enteredAnswer) {
-      console.log("correct");
+      setFeedback("You got it! 😊")
       setScore(score + 20);
     } else {
-      console.log("wrong");
+      setFeedback("Oops That does not look right 😔")
     }
   };
 
-  console.log(typeof data);
+  const handleKey = (e) => {
+    if (e.key === "Backspace") {
+      setFeedback("");
+    }
+  };
   return (
     <section className="outer_container">
       <h2 className="comic score">Score:{score}</h2>
-      <form className="form">
+     
+      <form
+        className={`form comic score ${
+          feedback === "You got it! 😊"
+            ? "correct"
+            : feedback === "Oops That does not look right 😔"
+            ? "incorrect"
+            : ""
+        }`}>
         <h2>√{randomNumber}</h2>
         <input ref={answer} type="number" />
         <button onClick={HandleSubmit} className="comic btn-general">
           SEND
         </button>
+        <br/>
+        <p style={{display:'block'}}>{feedback}</p>
       </form>
 
       <img src={ginger} alt="gingerbread icon" />
