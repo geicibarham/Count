@@ -13,6 +13,10 @@
   cursor: pointer;
 }
 
+.linkbtn {
+  text-decoration: none;
+}
+
 .landing {
   min-height: 80vh;
   background-color: #ffc7c7;
@@ -350,11 +354,16 @@ footer p {
 .outer-container {
   background-color: #f6adc7;
   justify-content: flex-start;
+  filter: drop-shadow(0 -6mm 4mm rgb(160, 0, 210));
   min-height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: white;
+}
+.outer-container img {
+  width: 300px;
+  align-self: start;
 }
 @media (min-width: 1200px) {
   .outer-container {
@@ -370,7 +379,7 @@ footer p {
   font-size: 20px;
 }
 .outer-container .second-game-form {
-  padding: 60px;
+  padding: 10px;
   align-items: center;
   display: flex;
   flex-wrap: wrap;
@@ -385,14 +394,14 @@ footer p {
   background-color: rgba(255, 99, 182, 0.4);
 }
 .outer-container .correct {
-  padding: 60px;
+  padding: 10px;
   align-items: center;
   display: flex;
   flex-wrap: wrap;
   background-color: #27bf03;
 }
 .outer-container .incorrect {
-  padding: 60px;
+  padding: 10px;
   align-items: center;
   display: flex;
   flex-wrap: wrap;
@@ -431,14 +440,53 @@ footer p {
     min-height: 87vh;
   }
 }
-.outer_container {
+@media screen and (max-width: 768px) {
+  .result-container {
+    background-position: bottom 50px right 10px;
+    background-size: cover;
+    min-height: 90vh;
+  }
+}
+.results {
   min-height: 83vh;
-  background-color: #c9a15a;
-  display: flex;
-  justify-content: center;
   display: grid;
   grid-template-columns: 1fr;
+  background-image: url("../../assets/images/ginger.jpg");
+  background-size: contain;
+  color: white;
+}
+.results button {
+  margin: 10px;
+  display: block;
+  color: white;
+  background-color: #5f4444;
+}
+
+.ResultsCard {
+  display: flex;
+  padding: 25px;
+  width: 50%;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  height: 80%;
+  margin-top: 10px;
+  align-items: center;
+  justify-self: center;
+  justify-content: center;
+  background-color: #da8243;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 40%;
+  margin-top: 30px;
+}
+
+.outer_container {
+  background-color: #c9a15a;
   color: #5f4444;
+  min-height: 83vh;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 .outer_container img {
   width: 300px;
@@ -453,14 +501,15 @@ footer p {
   padding: 25px;
   width: 50%;
   flex-wrap: wrap;
-  background-color: #f7ce76;
   border-radius: 10px;
   height: 80%;
   margin-top: 10px;
   align-items: center;
+  justify-self: center;
   justify-content: center;
-  place-self: center;
+  background-color: #f7ce76;
   color: #5f4444;
+  justify-self: center;
 }
 .form h2 {
   font-size: 35px;
@@ -502,21 +551,40 @@ footer p {
   background-color: rgba(207, 79, 79, 0.586);
 }
 
+.btn-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
 @media screen and (max-width: 768px) {
-  .outer_container {
+  .outer_container,
+.results {
     display: grid;
     min-height: 85vh;
   }
-  .outer_container img {
+  .outer_container img,
+.results img {
     width: 250px;
     height: 250px;
   }
-  .outer_container .form {
+  .outer_container .form,
+.results .form {
     display: flex;
     flex-direction: column;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
+  }
+  .btn-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .btn-container button {
+    width: 80%;
+  }
+  .results {
+    align-items: center;
   }
 }
 input::-webkit-outer-spin-button,

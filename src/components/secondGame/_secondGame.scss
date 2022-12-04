@@ -1,5 +1,4 @@
-
-@use '../../utilities';
+@use "../../utilities";
 @mixin roundedbtn {
   height: 25px;
   width: 25px;
@@ -7,12 +6,12 @@
   border-radius: 50px;
   font-weight: bold;
   display: inline-block;
-  color:utilities.$white;
+  color: utilities.$white;
   font-size: larger;
 }
 
 @mixin formContainer {
-  padding: 60px;
+  padding: 10px;
   align-items: center;
   display: flex;
   flex-wrap: wrap;
@@ -22,7 +21,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  color:utilities.$white;
+  color: utilities.$white;
   @media (min-width: 1200px) {
     min-height: 85vh;
   }
@@ -36,15 +35,14 @@
   background-size: cover;
   background-position: 5% 82%;
 
-
-  button{
+  button {
     background: linear-gradient(
       90deg,
       rgba(95, 68, 68, 1) 1%,
       rgba(232, 88, 154, 0.9429194819819819) 46%,
-      rgba(232, 88, 154, 0.9429194819819819) 46%,
+      rgba(232, 88, 154, 0.9429194819819819) 46%
     );
-    color:utilities.$white;
+    color: utilities.$white;
   }
   .btn-container {
     display: flex;
@@ -59,6 +57,13 @@
 .outer-container {
   background-color: #f6adc7;
   justify-content: flex-start;
+
+  img {
+    width: 300px;
+  align-self: start;
+
+  }
+  filter: drop-shadow(0 -6mm 4mm rgb(160, 0, 210));
   @include outer;
 
   .btn-container {
@@ -73,11 +78,10 @@
   .second-game-form {
     @include formContainer;
     background-color: #69e9f5;
-
     button {
       padding: 12px;
       background-color: utilities.$pinkBubblegum;
-      color:utilities.$white;
+      color: utilities.$white;
       &:hover {
         background-color: #ff63b666;
       }
@@ -122,5 +126,13 @@
 @media screen and (min-width: 1200px) {
   .outer-container {
     min-height: 87vh;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .result-container {
+    background-position: bottom 50px right 10px;
+    background-size: cover;
+    min-height: 90vh;
   }
 }

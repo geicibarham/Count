@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import donut from "../../assets/images/donut3.png";
 let operators = ["+", "/", "*", "-"];
+
 const randomOperation = operators[Math.floor(Math.random() * operators.length)];
 
 const SecondGame = () => {
@@ -115,6 +117,7 @@ const SecondGame = () => {
           SEND
         </button>
       </form>
+      <img src={donut} alt="donut icon" />
     </section>
   );
 };

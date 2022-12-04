@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import ginger from "../../assets/images/gingerbread-man.png";
-
+import { Link } from "react-router-dom";
 const Third = () => {
   const numbers = [9, 16, 25, 81, 49, 36, 64, 100];
   const [randomNumber, setRandom] = useState(
@@ -11,7 +11,8 @@ const Third = () => {
   const [score, setScore] = useState(0);
   const [feedback, setFeedback] = useState("");
   const answer = useRef();
-
+  const [gameisover, setGameisOver] = useState(false);
+  const [click, setClick] = useState(1);
   useEffect(() => {
     axios
       .get(`http://api.mathjs.org/v4/?expr=sqrt(${randomNumber})`)
@@ -23,12 +24,21 @@ const Third = () => {
   const HandleSubmit = (e) => {
     e.preventDefault();
     const enteredAnswer = answer.current?.value;
-    setRandom(numbers[Math.floor(Math.random() * numbers.length)]);
+
     if (data === enteredAnswer) {
       setFeedback("You got it! 😊");
       setScore(score + 20);
     } else {
       setFeedback("Oops That does not look right 😔");
+    }
+    trackGame();
+  };
+
+  const trackGame = () => {
+    setRandom(numbers[Math.floor(Math.random() * numbers.length)]);
+    setClick(click + 1);
+    if (click >= 8) {
+      setGameisOver(true);
     }
   };
 
@@ -37,7 +47,7 @@ const Third = () => {
       setFeedback("");
     }
   };
-  return (
+  return !gameisover ? (
     <section className="outer_container">
       <h2 className="comic score">Score:{score}</h2>
 
@@ -59,6 +69,24 @@ const Third = () => {
       </form>
 
       <img src={ginger} alt="gingerbread icon" />
+    </section>
+  ) : (
+    <section className="results">
+
+      <div className="ResultsCard" >
+        <p className="comic">Your Final Score is {score}</p>
+        <div className="btn-container">
+          <Link className="linkbtn" to="/scores">
+        <button className="comic btn-general">SEE SCORES</button>
+        </Link>
+     
+        <button onClick={()=>{
+          setGameisOver(false)
+        }}
+      className="comic btn-general">PLAY AGAIN</button>
+      
+        </div>
+      </div>
     </section>
   );
 };
