@@ -452,12 +452,11 @@ footer p {
   display: flex;
   padding: 25px;
   width: 50%;
+  flex-wrap: wrap;
   background-color: #f7ce76;
   border-radius: 10px;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  margin-top: 20px;
+  height: 80%;
+  margin-top: 10px;
   align-items: center;
   justify-content: center;
   place-self: center;
@@ -466,6 +465,9 @@ footer p {
 .form h2 {
   font-size: 35px;
   padding: 14px;
+}
+.form span {
+  width: 100%;
 }
 .form input {
   height: 50px !important;
@@ -477,6 +479,7 @@ footer p {
   box-sizing: border-box;
   transition: 0.1s;
   outline: none;
+  scroll-behavior: none;
   border-radius: 8px;
 }
 .form input:focus {
@@ -515,4 +518,14 @@ footer p {
     width: -moz-fit-content;
     width: fit-content;
   }
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }/*# sourceMappingURL=App.css.map */

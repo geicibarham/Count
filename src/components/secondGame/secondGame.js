@@ -57,6 +57,16 @@ const SecondGame = () => {
       setFeedback("");
     }
   };
+  let arr = [];
+  if (localStorage.getItem("scores")) {
+    arr = JSON.parse(localStorage.getItem("scores"));
+  }
+
+  if (score > 0 && gameOver === true) {
+    arr.push(score);
+  }
+
+  localStorage.setItem("scores", JSON.stringify(arr));
   return gameOver ? (
     <section className="result-container">
       <div className="result-card roundedCorner">

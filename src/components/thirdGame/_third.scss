@@ -1,5 +1,4 @@
-
-@use '../../utilities';
+@use "../../utilities";
 .outer_container {
   min-height: 83vh;
   background-color: #c9a15a;
@@ -7,13 +6,13 @@
   justify-content: center;
   display: grid;
   grid-template-columns: 1fr;
-  color:utilities.$brown-chocolate;
+  color: utilities.$brown-chocolate;
   img {
     width: 300px;
     height: 300px;
   }
 
-  .score{
+  .score {
     text-align: center;
   }
 }
@@ -22,69 +21,71 @@
   display: flex;
   padding: 25px;
   width: 50%;
-  background-color:#f7ce76;
+  flex-wrap: wrap;
+  background-color: #f7ce76;
   border-radius: 10px;
-  height: fit-content;
-  margin-top: 20px;
+  height: 80%;
+  margin-top: 10px;
   align-items: center;
   justify-content: center;
   place-self: center;
-  color:utilities.$brown-chocolate;
+  color: utilities.$brown-chocolate;
 
   h2 {
     font-size: 35px;
     padding: 14px;
   }
 
+  span {
+    width: 100%;
+  }
   input {
     height: 50px !important;
     border: none;
     margin: 10px;
-    color:utilities.$brown-chocolate;
+    color: utilities.$brown-chocolate;
     font-weight: bold;
     font-size: 20px;
     box-sizing: border-box;
     -webkit-transition: 0.5s;
     transition: 0.1s;
     outline: none;
+    scroll-behavior: none;
     border-radius: 8px;
     &:focus {
       border: solid 2px utilities.$brown-chocolate;
-    
     }
   }
   button {
     height: fit-content;
     background-color: utilities.$brown-chocolate;
-    color:utilities.$white;
-    padding:13px;
+    color: utilities.$white;
+    padding: 13px;
   }
 }
 
-.correct{
-background-color: utilities.$green-correct;
+.correct {
+  background-color: utilities.$green-correct;
 }
 
 .incorrect {
-    background-color: utilities.$incorrect;
+  background-color: utilities.$incorrect;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
+  .outer_container {
+    display: grid;
+    min-height: 85vh;
 
-    .outer_container{
-display: grid;
-min-height: 85vh;
-
-img{
-    width: 250px;
-    height:250px;
-}
-
-
-.form {
-    display: flex;
-    flex-direction: column;
-    width:fit-content;
-}
+    img {
+      width: 250px;
+      height: 250px;
     }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      width: fit-content;
+    }
+  }
 }
