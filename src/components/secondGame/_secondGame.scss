@@ -56,14 +56,18 @@
 }
 .outer-container {
   background-color: #f6adc7;
+  background-color: #24a3c9;
   justify-content: flex-start;
 
   img {
-    width: 300px;
+    width: 350px;
   align-self: start;
+  // filter: drop-shadow(0 -6mm 4mm rgb(160, 0, 210));
+  filter: drop-shadow(0 -6mm 4mm  rgb(227, 143, 176));
+ 
 
   }
-  filter: drop-shadow(0 -6mm 4mm rgb(160, 0, 210));
+
   @include outer;
 
   .btn-container {
@@ -78,6 +82,7 @@
   .second-game-form {
     @include formContainer;
     background-color: #69e9f5;
+    background-color: #e38fb0;
     button {
       padding: 12px;
       background-color: utilities.$pinkBubblegum;

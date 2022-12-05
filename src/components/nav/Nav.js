@@ -5,7 +5,9 @@ import rewards from '../../assets/images/rewards.png'
 const Nav = () => {
     return (
         <header>
-            <Link className='nav-link' to="/">
+            <Link role="button"
+            tabIndex={0}
+            className='nav-link' to="/">
             <h1 className='comic'>
                 Countless Fun
             </h1>

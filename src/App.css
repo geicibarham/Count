@@ -353,8 +353,8 @@ footer p {
 
 .outer-container {
   background-color: #f6adc7;
+  background-color: #24a3c9;
   justify-content: flex-start;
-  filter: drop-shadow(0 -6mm 4mm rgb(160, 0, 210));
   min-height: 80vh;
   display: flex;
   flex-direction: column;
@@ -362,8 +362,9 @@ footer p {
   color: white;
 }
 .outer-container img {
-  width: 300px;
+  width: 350px;
   align-self: start;
+  filter: drop-shadow(0 -6mm 4mm rgb(227, 143, 176));
 }
 @media (min-width: 1200px) {
   .outer-container {
@@ -384,6 +385,7 @@ footer p {
   display: flex;
   flex-wrap: wrap;
   background-color: #69e9f5;
+  background-color: #e38fb0;
 }
 .outer-container .second-game-form button {
   padding: 12px;
@@ -527,7 +529,6 @@ footer p {
   font-size: 20px;
   box-sizing: border-box;
   transition: 0.1s;
-  outline: none;
   scroll-behavior: none;
   border-radius: 8px;
 }
