@@ -94,6 +94,7 @@ const SecondGame = () => {
     <section className="outer-container">
       <h2 className="comic">Score {score}</h2>
       <p className="feedback comic">{feedback && feedback}</p>
+      <span className="levelName comic"> Level 2</span>
 
       <form
         className={`second-game-form roundedCorner ${

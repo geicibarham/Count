@@ -2,6 +2,7 @@ import "./_nav.scss";
 import { Link } from "react-router-dom";
 import rewards from "../../assets/images/rewards.png";
 const Nav = () => {
+
   return (
     <header>
       <Link role="button" tabIndex={0} className="nav-link link" to="/">
