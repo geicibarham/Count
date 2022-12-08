@@ -17,3 +17,9 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+
+button,.link {
+  &:focus{
+    outline: solid 3px lime !important;
+  }
+}

@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import donut from "../../assets/images/donut3.png";
+import candy from "../../assets/images/candy.png";
 let operators = ["+", "/", "*", "-"];
 
 const randomOperation = operators[Math.floor(Math.random() * operators.length)];
 
 const SecondGame = () => {
+
   const [firstNum, setFirst] = useState(Math.floor(Math.random() * 20));
   const [secondNum, setSecond] = useState(Math.floor(Math.random() * 10));
   const [score, setScore] = useState(0);
@@ -104,7 +105,7 @@ const SecondGame = () => {
         }`}
       >
         <p className="comic number firstNumber">{firstNum}</p>
-        <h1 className="operator">{randomOperation}</h1>
+        <p className="operator">{randomOperation}</p>
         <p className="comic number secondNumber">{secondNum}</p>
         <input
           onKeyDown={handleKey}
@@ -114,10 +115,10 @@ const SecondGame = () => {
         />
 
         <button onClick={HandleSubmit} className="comic btn-general">
-          SEND
+          CHECK ANSWER
         </button>
       </form>
-      <img src={donut} alt="donut icon" />
+      <img aria-hidden="true" src={candy} alt="" />
     </section>
   );
 };

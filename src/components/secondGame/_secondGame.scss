@@ -55,17 +55,16 @@
   }
 }
 .outer-container {
-  background-color: #f6adc7;
-  background-color: #24a3c9;
+  background-color: #f2c75c;
   justify-content: flex-start;
 
+  h2 {
+    margin: 0;
+  }
   img {
     width: 350px;
-  align-self: start;
-  // filter: drop-shadow(0 -6mm 4mm rgb(160, 0, 210));
-  filter: drop-shadow(0 -6mm 4mm  rgb(227, 143, 176));
- 
-
+    align-self: start;
+    filter: drop-shadow(0 -6mm 4mm rgb(227, 143, 176));
   }
 
   @include outer;
@@ -81,8 +80,7 @@
   }
   .second-game-form {
     @include formContainer;
-    background-color: #69e9f5;
-    background-color: #e38fb0;
+    background-color: #21174a;
     button {
       padding: 12px;
       background-color: utilities.$pinkBubblegum;
@@ -125,6 +123,7 @@
     color: orange !important;
     font-size: 60px;
     padding: 10px;
+    font-weight: bolder;
   }
 }
 
@@ -134,7 +133,26 @@
   }
 }
 
+@media screen and (max-width: 1000px) {
+  .outer-container img {
+    width: 280px;
+  }
+}
+
 @media screen and (max-width: 768px) {
+  .outer-container {
+    min-height: 85vh;
+  }
+
+  .second-game-form{
+    width: 80% !important;
+    justify-content: center;
+
+    button{
+      margin-top: 14px;
+    }
+    
+  }
   .result-container {
     background-position: bottom 50px right 10px;
     background-size: cover;

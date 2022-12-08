@@ -12,9 +12,8 @@
   border-radius: 8px;
   cursor: pointer;
 }
-
-.linkbtn {
-  text-decoration: none;
+.btn-general:focus {
+  outline: solid 3px lime !important;
 }
 
 .landing {
@@ -47,7 +46,8 @@
   display: flex;
   align-items: center;
   font-weight: bold;
-  background-color: #fd2eb3;
+  background-color: #FD58C4;
+  color: black !important;
 }
 .landing .firstBtn:hover {
   box-shadow: 0 0 10px 10px #b6f9c9;
@@ -69,7 +69,8 @@
   display: flex;
   align-items: center;
   font-weight: bold;
-  background-color: #61d4b3;
+  background-color: #00E6D6;
+  color: #003B49 !important;
 }
 .landing .secondBtn:hover {
   box-shadow: 0 0 10px 10px #b6f9c9;
@@ -352,14 +353,16 @@ footer p {
 }
 
 .outer-container {
-  background-color: #f6adc7;
-  background-color: #24a3c9;
+  background-color: #f2c75c;
   justify-content: flex-start;
   min-height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: white;
+}
+.outer-container h2 {
+  margin: 0;
 }
 .outer-container img {
   width: 350px;
@@ -384,8 +387,7 @@ footer p {
   align-items: center;
   display: flex;
   flex-wrap: wrap;
-  background-color: #69e9f5;
-  background-color: #e38fb0;
+  background-color: #21174a;
 }
 .outer-container .second-game-form button {
   padding: 12px;
@@ -435,6 +437,7 @@ footer p {
   color: orange !important;
   font-size: 60px;
   padding: 10px;
+  font-weight: bolder;
 }
 
 @media screen and (min-width: 1200px) {
@@ -442,7 +445,22 @@ footer p {
     min-height: 87vh;
   }
 }
+@media screen and (max-width: 1000px) {
+  .outer-container img {
+    width: 280px;
+  }
+}
 @media screen and (max-width: 768px) {
+  .outer-container {
+    min-height: 85vh;
+  }
+  .second-game-form {
+    width: 80% !important;
+    justify-content: center;
+  }
+  .second-game-form button {
+    margin-top: 14px;
+  }
   .result-container {
     background-position: bottom 50px right 10px;
     background-size: cover;
@@ -597,4 +615,8 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+button:focus, .link:focus {
+  outline: solid 3px lime !important;
 }/*# sourceMappingURL=App.css.map */

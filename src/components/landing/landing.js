@@ -7,20 +7,25 @@ const Landing = () => {
   return (
     <section className="landing">
       <div className="btn-container">
-        <Link to="/first" className="linkbtn">
+        <Link
+         to="/first" role="button" tabIndex={"-1"} className="linkbtn">
           <button className="firstBtn comic">
             Level 1
             <img className="btnIcon" src={cupcake} alt="cupcake icon" />
           </button>
         </Link>
-        <Link className="linkbtn" to="/second">
+        <Link role="button"
+        tabIndex={"-1"}
+         className="linkbtn" to="/second">
           <button className="secondBtn comic">
             Level 2
             <img className="btnIcon" src={brigadeiro} alt="brigadeiro icon" />
           </button>
         </Link>
 
-        <Link to="/third" className="linkbtn">
+        <Link role="button"
+        tabIndex={"-1"}
+         to="/third" className="linkbtn">
           <button className="thirdBtn comic">
             {" "}
             Level 3
