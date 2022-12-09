@@ -1,5 +1,4 @@
-
-@use '../../utilities';
+@use "../../utilities";
 
 @mixin roundedBorder {
   border-radius: 20px;
@@ -10,6 +9,11 @@
   background-color: #5cd8d2;
   align-items: center;
   min-height: 85vh;
+
+  span {
+    font-weight: bold;
+    color:utilities.$Dark-purple;
+  }
   .candy-icon {
     width: 600px;
     margin: auto;
@@ -21,7 +25,7 @@
   h2,
   h3 {
     text-align: center;
- color: utilities.$Dark-purple;
+    color: utilities.$Dark-purple;
   }
   .question-card {
     display: flex;
@@ -32,7 +36,7 @@
     margin: auto;
     height: 80%;
     @include roundedBorder;
-    color:utilities.$Dark-purple;
+    color: utilities.$Dark-purple;
     margin-bottom: 17px;
 
     span {
@@ -40,12 +44,11 @@
       text-align: center;
       margin-bottom: 10px;
     }
-
   }
 
   .btn-container {
     display: flex;
-    justify-content:center ;
+    justify-content: center;
     flex-wrap: nowrap;
   }
 
@@ -101,25 +104,24 @@
     align-items: center;
 
     h3 {
-     color: utilities.$Dark-purple;
+      color: utilities.$Dark-purple;
     }
 
     .restartBtn {
       width: 20%;
       border-radius: 8px;
       background-color: #f568bd;
-      color:utilities.$Dark-purple;
+      color: utilities.$Dark-purple;
       &:hover {
         background-color: #f568bd80;
       }
-    
     }
     .scores-btn {
-     width: fit-content;
-     border-radius: 8px;
-     &:hover{
-      background-color: utilities.$pinkBubblegum;
-     }
+      width: fit-content;
+      border-radius: 8px;
+      &:hover {
+        background-color: utilities.$pinkBubblegum;
+      }
     }
   }
 
@@ -132,16 +134,14 @@
       margin-bottom: 130px;
     }
 
-    .restartBtn{
-        width: 40% !important;
+    .restartBtn {
+      width: 40% !important;
     }
- 
   }
 }
 
-
 @media screen and (min-width: 1200px) {
-    .firstgame{
-        min-height: 85vh;
-    }
+  .firstgame {
+    min-height: 85vh;
+  }
 }

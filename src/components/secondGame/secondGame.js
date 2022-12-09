@@ -6,7 +6,6 @@ let operators = ["+", "/", "*", "-"];
 const randomOperation = operators[Math.floor(Math.random() * operators.length)];
 
 const SecondGame = () => {
-
   const [firstNum, setFirst] = useState(Math.floor(Math.random() * 20));
   const [secondNum, setSecond] = useState(Math.floor(Math.random() * 10));
   const [score, setScore] = useState(0);
@@ -92,9 +91,9 @@ const SecondGame = () => {
     </section>
   ) : (
     <section className="outer-container">
-      <h2 className="comic">Score {score}</h2>
-      <p className="feedback comic">{feedback && feedback}</p>
+      <h2 className="comic">Score {score} </h2>
       <span className="levelName comic"> Level 2</span>
+      <p className="feedback comic">{feedback}</p>
 
       <form
         className={`second-game-form roundedCorner ${
@@ -108,18 +107,22 @@ const SecondGame = () => {
         <p className="comic number firstNumber">{firstNum}</p>
         <p className="operator">{randomOperation}</p>
         <p className="comic number secondNumber">{secondNum}</p>
-        <input
-          onKeyDown={handleKey}
-          type="number"
-          onChange={handleChange}
-          value={answer}
-        />
+        <label className="comic" >
+          Enter Your Answer
+          <input
+            id="answer"
+            onKeyDown={handleKey}
+            type="number"
+            onChange={handleChange}
+            value={answer}
+          />
+        </label>
 
         <button onClick={HandleSubmit} className="comic btn-general">
           CHECK ANSWER
         </button>
       </form>
-      <img aria-hidden="true" src={candy} alt="" />
+      <img width="300px"aria-hidden="true" src={candy} alt="" />
     </section>
   );
 };

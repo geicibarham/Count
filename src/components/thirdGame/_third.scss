@@ -42,6 +42,12 @@
   background-color: #c9a15a;
   color: utilities.$brown-chocolate;
   @include container;
+
+
+  span{
+    text-align: center;
+    font-weight: bold;
+  }
   img {
     width: 300px;
     height: 300px;

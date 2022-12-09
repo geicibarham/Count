@@ -11,7 +11,7 @@ const Landing = () => {
          to="/first" role="button" tabIndex={"-1"} className="linkbtn">
           <button className="firstBtn comic">
             Level 1
-            <img className="btnIcon" src={cupcake} alt="cupcake icon" />
+            <img width="50px" className="btnIcon" src={cupcake} alt="cupcake icon" />
           </button>
         </Link>
         <Link role="button"
@@ -19,7 +19,7 @@ const Landing = () => {
          className="linkbtn" to="/second">
           <button className="secondBtn comic">
             Level 2
-            <img className="btnIcon" src={brigadeiro} alt="brigadeiro icon" />
+            <img  width="50px"className="btnIcon" src={brigadeiro} alt="brigadeiro icon" />
           </button>
         </Link>
 
@@ -29,7 +29,7 @@ const Landing = () => {
           <button className="thirdBtn comic">
             {" "}
             Level 3
-            <img className="btnIcon" src={donut} alt="donut icon" />
+            <img  width="50px" className="btnIcon" src={donut} alt="donut icon" />
           </button>
         </Link>
       </div>

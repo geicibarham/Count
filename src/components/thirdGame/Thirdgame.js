@@ -50,6 +50,7 @@ const Third = () => {
   return !gameisover ? (
     <section className="outer_container">
       <h2 className="comic score">Score:{score}</h2>
+      <span className="comic">Level 3</span>
 
       <form
         className={`form comic score ${
@@ -72,19 +73,21 @@ const Third = () => {
     </section>
   ) : (
     <section className="results">
-
-      <div className="ResultsCard" >
+      <div className="ResultsCard">
         <p className="comic">Your Final Score is {score}</p>
         <div className="btn-container">
           <Link className="linkbtn" to="/scores">
-        <button className="comic btn-general">SEE SCORES</button>
-        </Link>
-     
-        <button onClick={()=>{
-          setGameisOver(false)
-        }}
-      className="comic btn-general">PLAY AGAIN</button>
-      
+            <button className="comic btn-general">SEE SCORES</button>
+          </Link>
+
+          <button
+            onClick={() => {
+              setGameisOver(false);
+            }}
+            className="comic btn-general"
+          >
+            PLAY AGAIN
+          </button>
         </div>
       </div>
     </section>

@@ -43,7 +43,7 @@ const Firstgame = () => {
   return (
     <div className="firstgame">
       <h2 className="comic">Score {score}</h2>
-
+      <span className="comic">Level 1</span>
       {showResults ? (
         <div className="final-result">
           <h3 className="comic">Final Score is {score}</h3>

@@ -27,7 +27,6 @@
   text-decoration: none;
 }
 .landing .btnIcon {
-  width: 50px;
   margin-left: 5px;
 }
 .landing .firstBtn {
@@ -46,7 +45,7 @@
   display: flex;
   align-items: center;
   font-weight: bold;
-  background-color: #FD58C4;
+  background-color: #fd58c4;
   color: black !important;
 }
 .landing .firstBtn:hover {
@@ -69,8 +68,8 @@
   display: flex;
   align-items: center;
   font-weight: bold;
-  background-color: #00E6D6;
-  color: #003B49 !important;
+  background-color: #00e6d6;
+  color: #003b49 !important;
 }
 .landing .secondBtn:hover {
   box-shadow: 0 0 10px 10px #b6f9c9;
@@ -133,7 +132,6 @@ header .nav-link {
   color: white;
 }
 header .rewards-icon {
-  width: 60px;
   align-self: baseline;
   padding: 8px;
 }
@@ -155,6 +153,10 @@ footer p {
   background-color: #5cd8d2;
   align-items: center;
   min-height: 85vh;
+}
+.firstgame span {
+  font-weight: bold;
+  color: purple;
 }
 .firstgame .candy-icon {
   width: 600px;
@@ -321,6 +323,14 @@ footer p {
     width: 60%;
   }
 }
+#answer {
+  display: block;
+}
+
+.initial-container {
+  display: inline-block;
+}
+
 .result-container {
   min-height: 80vh;
   display: flex;
@@ -361,11 +371,11 @@ footer p {
   align-items: center;
   color: white;
 }
-.outer-container h2 {
+.outer-container h2, .outer-container span {
   margin: 0;
+  color: #21174a;
 }
 .outer-container img {
-  width: 350px;
   align-self: start;
   filter: drop-shadow(0 -6mm 4mm rgb(227, 143, 176));
 }
@@ -380,19 +390,20 @@ footer p {
   background-color: green;
 }
 .outer-container .feedback {
-  font-size: 20px;
+  font-size: 15px;
 }
 .outer-container .second-game-form {
   padding: 10px;
   align-items: center;
   display: flex;
-  flex-wrap: wrap;
   background-color: #21174a;
 }
 .outer-container .second-game-form button {
   padding: 12px;
   background-color: #ff63b5;
   color: white;
+  color: #21174a;
+  margin-top: 15px;
 }
 .outer-container .second-game-form button:hover {
   background-color: rgba(255, 99, 182, 0.4);
@@ -401,14 +412,12 @@ footer p {
   padding: 10px;
   align-items: center;
   display: flex;
-  flex-wrap: wrap;
   background-color: #27bf03;
 }
 .outer-container .incorrect {
   padding: 10px;
   align-items: center;
   display: flex;
-  flex-wrap: wrap;
   background-color: #f58080;
 }
 .outer-container input {
@@ -507,6 +516,10 @@ footer p {
   min-height: 83vh;
   display: grid;
   grid-template-columns: 1fr;
+}
+.outer_container span {
+  text-align: center;
+  font-weight: bold;
 }
 .outer_container img {
   width: 300px;
