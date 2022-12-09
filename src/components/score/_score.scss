@@ -1,5 +1,5 @@
-$whitetext:white;
 
+@use '../../utilities';
 .outer-container-score {
   display: flex;
   flex-direction: column;
@@ -7,7 +7,7 @@ $whitetext:white;
   align-items: center;
   background-color: #f694c1;
   h1 {
-    color: $whitetext;
+    color: utilities.$white;
  
   }
 
@@ -32,7 +32,7 @@ $whitetext:white;
   width: 30%;
   margin-top: 10px;
   text-align: center;
-  color: $whitetext;
+  color: utilities.$white;
   margin-bottom: 10px;
 
   p {
@@ -44,7 +44,7 @@ $whitetext:white;
   padding: 8px;
   border-radius: 8px;
   border: none;
-  color: $whitetext;
+  color: utilities.$white;
  background: rgb(95, 68, 68);
  cursor: pointer;
 }

@@ -16,7 +16,7 @@ const SecondGame = () => {
   const [numberStr, setNumertoString] = useState("");
   const [gameOver, setGameover] = useState(false);
 
-  const [click, setClick] = useState(0);
+  const [click, setClick] = useState(1);
   useEffect(() => {
     randomOperation === "+"
       ? setResult(firstNum + secondNum)
@@ -52,6 +52,16 @@ const SecondGame = () => {
 
     setFirst(Math.floor(Math.random() * 20));
     setSecond(Math.floor(Math.random() * 10));
+    let arr = [];
+    if (localStorage.getItem("scores")) {
+      arr = JSON.parse(localStorage.getItem("scores"));
+    }
+
+    if (score > 0 && click >=5) {
+      arr.push(score);
+    }
+
+    localStorage.setItem("scores", JSON.stringify(arr));
   };
 
   const handleKey = (e) => {
@@ -59,16 +69,9 @@ const SecondGame = () => {
       setFeedback("");
     }
   };
-  let arr = [];
-  if (localStorage.getItem("scores")) {
-    arr = JSON.parse(localStorage.getItem("scores"));
-  }
 
-  if (score > 0 && gameOver === true) {
-    arr.push(score);
-  }
+  console.log(click)
 
-  localStorage.setItem("scores", JSON.stringify(arr));
   return gameOver ? (
     <section className="result-container">
       <div className="result-card roundedCorner">
@@ -108,7 +111,7 @@ const SecondGame = () => {
         <p className="operator">{randomOperation}</p>
         <p className="comic number secondNumber">{secondNum}</p>
         <label className="comic">
-          Enter Your Answer <span className="comic star">*</span>
+          Enter Your Answer
           <input
             className="answer"
             onKeyDown={handleKey}
