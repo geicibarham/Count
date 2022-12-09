@@ -15,7 +15,7 @@ const Third = () => {
   const [click, setClick] = useState(1);
   useEffect(() => {
     axios
-      .get(`http://api.mathjs.org/v4/?expr=sqrt(${randomNumber})`)
+      .get(`https://api.mathjs.org/v4/?expr=sqrt(${randomNumber})`)
       .then((res) => {
         setData(res.data.toString());
       });
@@ -62,14 +62,19 @@ const Third = () => {
         }`}
       >
         <h2>√{randomNumber}</h2>
-        <input onKeyDown={handleKey} ref={answer} type="number" />
+        <label className="comic" >
+          Enter your answer
+          <span className="comic star">*</span>
+        <input className="answer"
+        onKeyDown={handleKey} ref={answer} type="number" />
+        </label>
         <button onClick={HandleSubmit} className="comic btn-general">
           SEND
         </button>
         <span>{feedback}</span>
       </form>
 
-      <img src={ginger} alt="gingerbread icon" />
+      <img width="300px" height="300px" src={ginger} alt="gingerbread icon" />
     </section>
   ) : (
     <section className="results">

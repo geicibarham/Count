@@ -107,10 +107,10 @@ const SecondGame = () => {
         <p className="comic number firstNumber">{firstNum}</p>
         <p className="operator">{randomOperation}</p>
         <p className="comic number secondNumber">{secondNum}</p>
-        <label className="comic" >
-          Enter Your Answer
+        <label className="comic">
+          Enter Your Answer <span className="comic star">*</span>
           <input
-            id="answer"
+            className="answer"
             onKeyDown={handleKey}
             type="number"
             onChange={handleChange}
@@ -122,7 +122,7 @@ const SecondGame = () => {
           CHECK ANSWER
         </button>
       </form>
-      <img width="300px"aria-hidden="true" src={candy} alt="" />
+      <img width="300px" aria-hidden="true" src={candy} alt="" />
     </section>
   );
 };

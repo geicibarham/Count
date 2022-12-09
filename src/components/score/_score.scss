@@ -6,9 +6,13 @@ $whitetext:white;
   min-height: 85vh;
   align-items: center;
   background-color: #f694c1;
-  h1,
-  h2 {
+  h1 {
     color: $whitetext;
+ 
+  }
+
+  h2{
+    color:#322727;
   }
 }
 
@@ -45,7 +49,6 @@ $whitetext:white;
  cursor: pointer;
 }
 .icon{
-    width: 50px;
     align-self: center;
 }
 

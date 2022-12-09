@@ -281,9 +281,11 @@ footer p {
   align-items: center;
   background-color: #f694c1;
 }
-.outer-container-score h1,
-.outer-container-score h2 {
+.outer-container-score h1 {
   color: white;
+}
+.outer-container-score h2 {
+  color: #322727;
 }
 
 .score-card {
@@ -314,7 +316,6 @@ footer p {
 }
 
 .icon {
-  width: 50px;
   align-self: center;
 }
 
@@ -323,10 +324,6 @@ footer p {
     width: 60%;
   }
 }
-#answer {
-  display: block;
-}
-
 .initial-container {
   display: inline-block;
 }
@@ -371,7 +368,7 @@ footer p {
   align-items: center;
   color: white;
 }
-.outer-container h2, .outer-container span {
+.outer-container h2 {
   margin: 0;
   color: #21174a;
 }
@@ -521,10 +518,6 @@ footer p {
   text-align: center;
   font-weight: bold;
 }
-.outer_container img {
-  width: 300px;
-  height: 300px;
-}
 .outer_container .score {
   text-align: center;
 }
@@ -638,4 +631,13 @@ button:focus, .link:focus {
   font-weight: bold;
   margin-bottom: 12px;
   font-size: 18px;
+}
+
+.star {
+  color: red;
+  font-weight: bold;
+}
+
+.answer {
+  display: block;
 }/*# sourceMappingURL=App.css.map */

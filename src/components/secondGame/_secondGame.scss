@@ -26,9 +26,7 @@
   }
 }
 
-#answer {
-  display: block;
-}
+
 .initial-container {
   display: inline-block;
 }
@@ -63,10 +61,13 @@
   background-color: #f2c75c;
   justify-content: flex-start;
 
-  h2, span {
+  h2
+  {
     margin: 0;
-    color:#21174a;
+    color: utilities.$dark-blue;
   }
+
+
   img {
     align-self: start;
     filter: drop-shadow(0 -6mm 4mm rgb(227, 143, 176));
@@ -85,14 +86,14 @@
   }
   .second-game-form {
     @include formContainer;
-    background-color: #21174a;
+    background-color: utilities.$dark-blue;
     button {
       padding: 12px;
       background-color: utilities.$pinkBubblegum;
       color: utilities.$white;
-      color:#21174a;
-      margin-top:15px;
-    
+      color: utilities.$dark-blue;
+      margin-top: 15px;
+
       &:hover {
         background-color: #ff63b666;
       }

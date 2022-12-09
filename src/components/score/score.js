@@ -31,7 +31,8 @@ const Score = () => {
                 <div className="score-card">
                     <p className="comic" key={index.toString()}>
                         {score}
-                        <img className="icon" src={rewards} alt="rewards icon" />
+                        <img width="50px"
+                        className="icon" src={rewards} alt="rewards icon" />
                     </p>
                 </div>
             ))}
