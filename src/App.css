@@ -460,9 +460,15 @@ footer p {
   .outer-container {
     min-height: 85vh;
   }
+  .operator {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
   .second-game-form {
     width: 80% !important;
     justify-content: center;
+    display: flex;
+    flex-direction: column;
   }
   .second-game-form button {
     margin-top: 14px;

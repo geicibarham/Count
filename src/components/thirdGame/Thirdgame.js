@@ -41,7 +41,6 @@ const Third = () => {
     if (e.key === "Backspace") {
       setFeedback("");
       setRandom(numbers[Math.floor(Math.random() * numbers.length)]);
-
     }
   };
   return !gameisover ? (
