@@ -21,3 +21,12 @@
 
 
 ![second game over page](https://github.com/geicibarham/MathFun/blob/main/src/assets/images/secondGameover.png)
+
+<h3> Technologies </h3>
+
+<ul> 
+<li>React.js</li>
+<li>Math.js Api</li>
+<li>Sass</li>
+<li> Javascript</li>
+</ul>
