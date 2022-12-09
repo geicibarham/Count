@@ -25,26 +25,23 @@ const Third = () => {
     e.preventDefault();
     const enteredAnswer = answer.current?.value;
 
+    setClick(click + 1);
+    if (click >= 8) {
+      setGameisOver(true);
+    }
     if (data === enteredAnswer) {
       setFeedback("You got it! 😊");
       setScore(score + 20);
     } else {
       setFeedback("Oops That does not look right 😔");
     }
-    trackGame();
-  };
-
-  const trackGame = () => {
-    setRandom(numbers[Math.floor(Math.random() * numbers.length)]);
-    setClick(click + 1);
-    if (click >= 8) {
-      setGameisOver(true);
-    }
   };
 
   const handleKey = (e) => {
     if (e.key === "Backspace") {
       setFeedback("");
+      setRandom(numbers[Math.floor(Math.random() * numbers.length)]);
+
     }
   };
   return !gameisover ? (
@@ -62,11 +59,15 @@ const Third = () => {
         }`}
       >
         <h2>√{randomNumber}</h2>
-        <label className="comic" >
+        <label className="comic">
           Enter your answer
           <span className="comic star">*</span>
-        <input className="answer"
-        onKeyDown={handleKey} ref={answer} type="number" />
+          <input
+            className="answer"
+            onKeyDown={handleKey}
+            ref={answer}
+            type="number"
+          />
         </label>
         <button onClick={HandleSubmit} className="comic btn-general">
           SEND

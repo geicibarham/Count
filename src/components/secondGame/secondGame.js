@@ -57,7 +57,7 @@ const SecondGame = () => {
       arr = JSON.parse(localStorage.getItem("scores"));
     }
 
-    if (score > 0 && click >=5) {
+    if (score > 0 && click >= 5) {
       arr.push(score);
     }
 
@@ -70,7 +70,7 @@ const SecondGame = () => {
     }
   };
 
-  console.log(click)
+  console.log(click);
 
   return gameOver ? (
     <section className="result-container">
