@@ -10,7 +10,6 @@ const Firstgame = () => {
   const [gameisover, setGameisOver] = useState(false);
 
   const optionClicked = (isCorrect) => {
-    // Increment the score
     if (isCorrect) {
       setScore(score + 10);
     }
@@ -51,10 +50,10 @@ const Firstgame = () => {
             RESTART
           </button>
 
-          <Link to="/scores">  <button className="scores-btn comic">
-            SEE SCORES
-          </button></Link>
-
+          <Link to="/scores">
+            {" "}
+            <button className="scores-btn comic">SEE SCORES</button>
+          </Link>
         </div>
       ) : (
         <div className="question-card comic">
@@ -62,7 +61,9 @@ const Firstgame = () => {
             Question: {currentQuestion + 1} out of {questions.length}
           </span>
 
-          <span className="question-text">{questions[currentQuestion].text}</span>
+          <span className="question-text">
+            {questions[currentQuestion].text}
+          </span>
 
           <img
             className="candy-icon"

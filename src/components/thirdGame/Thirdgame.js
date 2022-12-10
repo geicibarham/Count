@@ -8,7 +8,7 @@ const Third = () => {
     numbers[Math.floor(Math.random() * numbers.length)]
   );
   const [data, setData] = useState(0);
-  const [score, setScore] = useState(0);
+  const [score, setScore] = useState(20);
   const [feedback, setFeedback] = useState("");
   const answer = useRef();
   const [gameisover, setGameisOver] = useState(false);
@@ -26,7 +26,7 @@ const Third = () => {
     const enteredAnswer = answer.current?.value;
 
     setClick(click + 1);
-    if (click >= 8) {
+    if (click >7) {
       setGameisOver(true);
     }
     if (data === enteredAnswer) {
@@ -35,6 +35,8 @@ const Third = () => {
     } else {
       setFeedback("Oops That does not look right 😔");
     }
+
+    handleSave();
   };
 
   const handleKey = (e) => {
@@ -43,11 +45,24 @@ const Third = () => {
       setRandom(numbers[Math.floor(Math.random() * numbers.length)]);
     }
   };
+
+  const handleSave = () => {
+    let arr = [];
+    if (localStorage.getItem("scores")) {
+      arr = JSON.parse(localStorage.getItem("scores"));
+    }
+
+    if (score > 0 && click > 7) {
+      arr.push(score);
+    }
+
+    localStorage.setItem("scores", JSON.stringify(arr));
+  };
   return !gameisover ? (
     <section className="outer_container">
       <h2 className="comic score">Score:{score}</h2>
       <span className="comic">Level 3</span>
-
+  {/* <span>{feedback}</span> */}
       <form
         className={`form comic score ${
           feedback === "You got it! 😊"
@@ -58,20 +73,18 @@ const Third = () => {
         }`}
       >
         <h2>√{randomNumber}</h2>
-        <label className="comic">
-          Enter your answer
-          <span className="comic star">*</span>
+    
           <input
             className="answer"
             onKeyDown={handleKey}
             ref={answer}
             type="number"
           />
-        </label>
+ 
         <button onClick={HandleSubmit} className="comic btn-general">
           SEND
         </button>
-        <span>{feedback}</span>
+      
       </form>
 
       <img width="300px" height="300px" src={ginger} alt="gingerbread icon" />

@@ -9,10 +9,11 @@
   background-color: #5cd8d2;
   align-items: center;
   min-height: 85vh;
+  justify-content: baseline;
 
   span {
     font-weight: bold;
-    color:utilities.$Dark-purple;
+    color: utilities.$Dark-purple;
   }
   .candy-icon {
     width: 600px;
@@ -34,10 +35,11 @@
     padding: 15px;
     width: 70%;
     margin: auto;
-    height: 80%;
+    min-height: 100%;
     @include roundedBorder;
     color: utilities.$Dark-purple;
     margin-bottom: 17px;
+    align-self: start;
 
     span {
       font-size: 20px;
@@ -130,6 +132,15 @@
       width: 300px;
     }
 
+    .btn01,
+    .btn11,
+    .btn21,
+    .btn31 {
+      width: 45px;
+      height: 45px;
+      margin: auto;
+      margin-top: 10px;
+    }
     .question-card {
       margin-bottom: 130px;
     }

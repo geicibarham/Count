@@ -10,6 +10,7 @@ const Score = () => {
       setScorearr(JSON.parse(localStorage.getItem("scores")));
     }
   }, []);
+
   if (scoreArr.length === 0) {
     return (
       <div className="outer-container-score">
@@ -25,8 +26,8 @@ const Score = () => {
     <div className="outer-container-score">
       <h2 className="comic">Scores</h2>
       {scoreArr.map((score, index) => (
-        <div className="score-card">
-          <p className="comic" key={index.toString()}>
+        <div key={score} className="score-card">
+          <p className="comic">
             {score}
             <img
               width="50px"
