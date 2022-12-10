@@ -13,6 +13,7 @@
 @mixin formContainer {
   padding: 10px;
   align-items: center;
+  justify-content: center;
   display: flex;
 }
 @mixin outer {
@@ -25,8 +26,6 @@
     min-height: 85vh;
   }
 }
-
-
 .initial-container {
   display: inline-block;
 }
@@ -61,7 +60,7 @@
   background-color: #f2c75c;
   justify-content: flex-start;
 
-  h2
+  h2, .levelName
   {
     margin: 0;
     color: utilities.$dark-blue;

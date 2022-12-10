@@ -70,7 +70,6 @@ const SecondGame = () => {
     }
   };
 
-  console.log(click);
 
   return gameOver ? (
     <section className="result-container">
@@ -110,8 +109,7 @@ const SecondGame = () => {
         <p className="comic number firstNumber">{firstNum}</p>
         <p className="operator">{randomOperation}</p>
         <p className="comic number secondNumber">{secondNum}</p>
-        <label className="comic">
-          Enter Your Answer
+   
           <input
             className="answer"
             onKeyDown={handleKey}
@@ -119,8 +117,6 @@ const SecondGame = () => {
             onChange={handleChange}
             value={answer}
           />
-        </label>
-
         <button onClick={HandleSubmit} className="comic btn-general">
           CHECK ANSWER
         </button>

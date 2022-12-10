@@ -26,7 +26,7 @@ const Third = () => {
     const enteredAnswer = answer.current?.value;
 
     setClick(click + 1);
-    if (click >7) {
+    if (click > 7) {
       setGameisOver(true);
     }
     if (data === enteredAnswer) {
@@ -62,7 +62,7 @@ const Third = () => {
     <section className="outer_container">
       <h2 className="comic score">Score:{score}</h2>
       <span className="comic">Level 3</span>
-  <span>{feedback}</span>
+      <span>{feedback}</span>
       <form
         className={`form comic score ${
           feedback === "You got it! 😊"
@@ -73,18 +73,17 @@ const Third = () => {
         }`}
       >
         <h2>√{randomNumber}</h2>
-    
-          <input
-            className="answer"
-            onKeyDown={handleKey}
-            ref={answer}
-            type="number"
-          />
- 
+
+        <input
+          className="answer"
+          onKeyDown={handleKey}
+          ref={answer}
+          type="number"
+        />
+
         <button onClick={HandleSubmit} className="comic btn-general">
           SEND
         </button>
-      
       </form>
 
       <img width="300px" height="300px" src={ginger} alt="gingerbread icon" />

@@ -153,6 +153,7 @@ footer p {
   background-color: #5cd8d2;
   align-items: center;
   min-height: 85vh;
+  justify-content: baseline;
 }
 .firstgame span {
   font-weight: bold;
@@ -177,10 +178,11 @@ footer p {
   padding: 15px;
   width: 70%;
   margin: auto;
-  height: 80%;
+  min-height: 100%;
   border-radius: 20px;
   color: purple;
   margin-bottom: 17px;
+  align-self: start;
 }
 .firstgame .question-card span {
   font-size: 20px;
@@ -260,6 +262,15 @@ footer p {
 @media screen and (max-width: 768px) {
   .firstgame .candy-icon {
     width: 300px;
+  }
+  .firstgame .btn01,
+.firstgame .btn11,
+.firstgame .btn21,
+.firstgame .btn31 {
+    width: 45px;
+    height: 45px;
+    margin: auto;
+    margin-top: 10px;
   }
   .firstgame .question-card {
     margin-bottom: 130px;
@@ -368,7 +379,7 @@ footer p {
   align-items: center;
   color: white;
 }
-.outer-container h2 {
+.outer-container h2, .outer-container .levelName {
   margin: 0;
   color: #21174a;
 }
@@ -392,6 +403,7 @@ footer p {
 .outer-container .second-game-form {
   padding: 10px;
   align-items: center;
+  justify-content: center;
   display: flex;
   background-color: #21174a;
 }
@@ -408,12 +420,14 @@ footer p {
 .outer-container .correct {
   padding: 10px;
   align-items: center;
+  justify-content: center;
   display: flex;
   background-color: #27bf03;
 }
 .outer-container .incorrect {
   padding: 10px;
   align-items: center;
+  justify-content: center;
   display: flex;
   background-color: #f58080;
 }
@@ -489,7 +503,6 @@ footer p {
 }
 .results button {
   margin: 10px;
-  display: block;
   color: white;
   background-color: #5f4444;
 }
@@ -572,6 +585,7 @@ footer p {
   background-color: #5f4444;
   color: white;
   padding: 13px;
+  margin-top: 18px;
 }
 
 .correct {
@@ -642,8 +656,4 @@ button:focus, .link:focus {
 .star {
   color: red;
   font-weight: bold;
-}
-
-.answer {
-  display: block;
 }/*# sourceMappingURL=App.css.map */
