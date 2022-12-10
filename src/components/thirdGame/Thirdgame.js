@@ -62,7 +62,7 @@ const Third = () => {
     <section className="outer_container">
       <h2 className="comic score">Score:{score}</h2>
       <span className="comic">Level 3</span>
-  {/* <span>{feedback}</span> */}
+  <span>{feedback}</span>
       <form
         className={`form comic score ${
           feedback === "You got it! 😊"
