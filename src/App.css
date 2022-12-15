@@ -526,6 +526,11 @@ footer p {
   margin-top: 30px;
 }
 
+label, input {
+  display: flex;
+  flex-direction: column;
+}
+
 .outer_container {
   background-color: #c9a15a;
   color: #5f4444;
@@ -603,6 +608,10 @@ footer p {
 }
 
 @media screen and (max-width: 768px) {
+  label, input {
+    display: flex;
+    flex-direction: row;
+  }
   .outer_container,
 .results {
     display: grid;
