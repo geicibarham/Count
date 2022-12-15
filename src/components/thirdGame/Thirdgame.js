@@ -13,6 +13,7 @@ const Third = () => {
   const answer = useRef();
   const [gameisover, setGameisOver] = useState(false);
   const [click, setClick] = useState(1);
+  const [error,setError] = useState("")
   useEffect(() => {
     axios
       .get(`https://api.mathjs.org/v4/?expr=sqrt(${randomNumber})`)
@@ -23,9 +24,14 @@ const Third = () => {
 
   const HandleSubmit = (e) => {
     e.preventDefault();
-    const enteredAnswer = answer.current?.value;
 
+    const enteredAnswer = answer.current?.value;
+    if (!enteredAnswer) {
+      setError('You need to enter a number!')
+      return;
+    }
     setClick(click + 1);
+    setError("")
     if (click > 7) {
       setGameisOver(true);
     }
@@ -62,7 +68,8 @@ const Third = () => {
     <section className="outer_container">
       <h2 className="comic score">Score:{score}</h2>
       <span className="comic">Level 3</span>
-      <span>{feedback}</span>
+      <span className="comic">{feedback}</span>
+      <span aria-label="error message"className="comic">{error}</span>
       <form
         className={`form comic score ${
           feedback === "You got it! 😊"
@@ -74,12 +81,15 @@ const Third = () => {
       >
         <h2>√{randomNumber}</h2>
 
-        <input
-          className="answer"
-          onKeyDown={handleKey}
-          ref={answer}
-          type="number"
-        />
+        <label>
+          Enter the answer
+          <input
+            className="answer"
+            onKeyDown={handleKey}
+            ref={answer}
+            type="number"
+          />
+        </label>
 
         <button onClick={HandleSubmit} className="comic btn-general">
           SEND
